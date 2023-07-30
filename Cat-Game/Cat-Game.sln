@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{e5aca0b1-7a16-f732-b8b9-6cea4763e754}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem", "Unity.InputSystem.csproj", "{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{a393353f-06d0-ee8d-f4d3-b2996ac8049d}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro", "Unity.TextMeshPro.csproj", "{4913223d-32d9-f94d-b403-1ee982fcd827}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Timeline", "Unity.Timeline.csproj", "{96f27780-5f97-e17a-80d6-abf8794903a3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem", "Unity.InputSystem.csproj", "{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1de8918a-2f2e-070c-f326-4f529a4f720b}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.TestRunner", "UnityEditor.TestRunner.csproj", "{74e648fe-3f2c-068b-6cbe-8f4354000f15}"
 EndProject
@@ -32,14 +34,16 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{e5aca0b1-7a16-f732-b8b9-6cea4763e754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e5aca0b1-7a16-f732-b8b9-6cea4763e754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a393353f-06d0-ee8d-f4d3-b2996ac8049d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a393353f-06d0-ee8d-f4d3-b2996ac8049d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4913223d-32d9-f94d-b403-1ee982fcd827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4913223d-32d9-f94d-b403-1ee982fcd827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96f27780-5f97-e17a-80d6-abf8794903a3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96f27780-5f97-e17a-80d6-abf8794903a3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1de8918a-2f2e-070c-f326-4f529a4f720b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1de8918a-2f2e-070c-f326-4f529a4f720b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74e648fe-3f2c-068b-6cbe-8f4354000f15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74e648fe-3f2c-068b-6cbe-8f4354000f15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9c00f743-99ff-90e5-37d7-62ceb94189a6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
