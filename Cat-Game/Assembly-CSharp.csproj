@@ -36,7 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Animations\Lowpoly Toon Cat Lite\Demo\Cat_Lite_Demo.cs" />
      <Compile Include="Assets\Animations\Quirky Series Ultimate\_Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\CatActions.cs" />
      <Compile Include="Assets\Scripts\ColliosionHandler.cs" />
