@@ -657,6 +657,9 @@
  <Reference Include="Unity.InputSystem">
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
+ <Reference Include="Nobi.UiRoundedCorners.Editor">
+ <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Nobi.UiRoundedCorners.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -678,14 +681,11 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Nobi.UiRoundedCorners.Editor">
- <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Nobi.UiRoundedCorners.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Nobi.UiRoundedCorners">
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Nobi.UiRoundedCorners.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
