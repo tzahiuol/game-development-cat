@@ -58,6 +58,8 @@
      <Compile Include="Assets\Animations\Quirky Series Ultimate\_Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\CatActions.cs" />
      <Compile Include="Assets\Scripts\ColliosionHandler.cs" />
+     <Compile Include="Assets\Scripts\Level1Events.cs" />
+     <Compile Include="Assets\Scripts\RotateWorld.cs" />
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
