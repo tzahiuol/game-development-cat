@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8A91E81D-2E2F-0C07-F326-4F529A4F720B}</ProjectGuid>
+    <ProjectGuid>{1376C4BC-6A0F-0CD2-DFAA-9288C581A8BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,10 +56,26 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Animations\Quirky Series Ultimate\_Scripts\Demo.cs" />
+<<<<<<< Updated upstream
      <Compile Include="Assets\HUD\Timer\Timer.cs" />
      <Compile Include="Assets\PauseMenu\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\CatActions.cs" />
      <Compile Include="Assets\Scripts\ColliosionHandler.cs" />
+=======
+     <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
+     <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorToggle.cs" />
+     <Compile Include="Assets\HUD\Timer\Timer.cs" />
+     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+     <Compile Include="Assets\PauseMenu\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\CameraRotation.cs" />
+     <Compile Include="Assets\Scripts\CatActions.cs" />
+     <Compile Include="Assets\Scripts\ColliosionHandler.cs" />
+     <Compile Include="Assets\Scripts\GrassInstanciate.cs" />
+     <Compile Include="Assets\Scripts\ItemCollision.cs" />
+     <Compile Include="Assets\Scripts\Level1Events.cs" />
+     <Compile Include="Assets\Scripts\RotateWorld.cs" />
+>>>>>>> Stashed changes
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -158,9 +174,11 @@
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\TAA.cginc" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+     <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+     <None Include="Assets\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\ACES.cginc" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -169,6 +187,7 @@
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\Fog.shader" />
+     <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\MotionBlur.shader" />
      <None Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
@@ -371,7 +390,11 @@
  <HintPath>D:/Unity/2019.4.16f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
+<<<<<<< Updated upstream
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+=======
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+>>>>>>> Stashed changes
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Unity/2019.4.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -719,6 +742,7 @@
  <HintPath>D:/Unity/2019.4.16f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
+<<<<<<< Updated upstream
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
@@ -759,9 +783,59 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>F:/projects/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+=======
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InputSystem">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="Nobi.UiRoundedCorners.Editor">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Nobi.UiRoundedCorners.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Nobi.UiRoundedCorners">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/Nobi.UiRoundedCorners.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/sever/OneDrive/Dokumente/Bsc/GamesDev/game-development-cat-main/Cat-Game_V2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+>>>>>>> Stashed changes
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{2B35A372-7474-5FBE-5487-A7F5D8D0FE32}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{6ABBA0CC-09D8-EE7A-04C3-A752A202A918}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
