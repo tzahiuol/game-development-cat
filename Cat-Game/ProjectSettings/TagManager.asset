@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - shoveItem
+  - collectible
+  - floor
+  - enemy
+  - TransparentTrigger
   layers:
   - Default
   - TransparentFX
