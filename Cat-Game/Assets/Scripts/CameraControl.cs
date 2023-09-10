@@ -50,9 +50,9 @@ public class CameraControl : MonoBehaviour
         
         
 
-        transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
+        //transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
         ////https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
-        //transform.LookAt(character.position);
+        transform.LookAt(character.position);
         //Debug.Log("Character " + character.position + " Camera " + transform.position);
         zoomVector = new Vector3(character.position.x, transform.position.y, character.position.z);
         zoomVectorOut = new Vector3(-zoomVector.x, transform.position.y, -zoomVector.z);
@@ -69,13 +69,14 @@ public class CameraControl : MonoBehaviour
         //https://learn.microsoft.com/en-us/dotnet/api/system.single.equals?view=net-7.0
         //get absolute difference 
         float diffX = Math.Abs(character.position.x - transform.position.x); 
-        float diffY = Math.Abs(character.position.z - transform.position.z);
+        float diffZ = Math.Abs(character.position.z - transform.position.z);
+        float diffY = Math.Abs(character.position.y - transform.position.y);
 
-            if (Keyboard.current.kKey.isPressed) //Zoom In
+        if (Keyboard.current.kKey.isPressed) //Zoom In
             {
                 //compare absolute difference with zoom constraint 
                 if ((diffX >= maxZoomIn) &&
-                (diffY >= maxZoomIn))
+                (diffZ >= maxZoomIn))
                 {
                 //transform.LookAt(character.position);
                 transform.position = Vector3.Lerp(transform.position, zoomVector, lerpSpeed);
@@ -85,7 +86,7 @@ public class CameraControl : MonoBehaviour
             else if(Keyboard.current.lKey.isPressed) //Zoom Out
             {
             if ((diffX <= maxZoomOut) &&
-                (diffY <= maxZoomOut))
+                (diffZ <= maxZoomOut))
             {
                 transform.LookAt(character.position);
                 transform.position = Vector3.Lerp(transform.position, zoomVectorOut, lerpSpeed);

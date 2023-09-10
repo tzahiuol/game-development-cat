@@ -26,28 +26,33 @@ public class ItemCollision : MonoBehaviour
         
     }
 
-
+    //check for collissions with item
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("collectible"))
+        if (other.gameObject.tag == "collectible")
         {
-            string item = other.tag;
-          
+           //increase collected item count
             collectedItems++;
-            Destroy(gameObject);
-            CheckItems(item);
+           
+            //pass item to CheckItems 
+            CheckItems(other.gameObject);
+            //make object inactive, since we still need information for CheckItems function
+            other.gameObject.SetActive(false);
         }
     }
 
-    private void CheckItems(string item)
+    //checks whether all items were collected 
+    //and if player can proceed
+    //also handles level transition 
+    private void CheckItems(GameObject item)
     {
         if (collectedItems >= 3)
         {
             levelPassage.SetActive(true);
         }
-        else if( scene.name == "Level2")
+        else if( scene.name == "Level1")
         {
-            if(item == "Item2")
+            if(item)
             {
                 Debug.Log("Ok");
             }
