@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 fileFormatVersion: 2
 guid: adb30198aa32dd140b5750692dd48104
 MonoImporter:
@@ -10,16 +9,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-fileFormatVersion: 2
-guid: adb30198aa32dd140b5750692dd48104
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> Stashed changes

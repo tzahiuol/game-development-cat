@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "name": "Nobi.UiRoundedCorners",
     "references": [],
@@ -6,13 +5,4 @@
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false
-=======
-{
-    "name": "Nobi.UiRoundedCorners",
-    "references": [],
-    "optionalUnityReferences": [],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false
->>>>>>> Stashed changes
 }

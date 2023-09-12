@@ -6,12 +6,27 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-
     public float TimeLeft;
     public bool TimerOn = false;
 
     public Text TimerText;
 
+    private static Timer _instance;
+
+    public static Timer Instance { get { return _instance; } }
+
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

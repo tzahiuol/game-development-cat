@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 using UnityEngine;
 
 namespace Nobi.UiRoundedCorners {
@@ -16,22 +15,3 @@ namespace Nobi.UiRoundedCorners {
 		}
 	}
 }
-=======
-using UnityEngine;
-
-namespace Nobi.UiRoundedCorners {
-	internal static class DestroyHelper {
-		internal static void Destroy(Object @object) {
-#if UNITY_EDITOR
-		if (Application.isPlaying) {
-			Object.Destroy(@object);
-		} else {
-			Object.DestroyImmediate(@object);
-		}
-#else
-			Object.Destroy(@object);
-#endif
-		}
-	}
-}
->>>>>>> Stashed changes
