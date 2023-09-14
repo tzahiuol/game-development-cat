@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
     //public Transform pivotPoint;
     public Transform character;
     //public float rotationSpeed = 20f;
-
+    Transform Obstruction;
     Vector3 offset;
 
     //Zoom Vector
@@ -27,6 +27,7 @@ public class CameraControl : MonoBehaviour
 
     private void Start()
     {
+        Obstruction = character;
         //UoL Lecture 3D Graphics and Animation
         offset = transform.position - character.transform.position;
         transform.LookAt(character.position);
@@ -56,6 +57,11 @@ public class CameraControl : MonoBehaviour
         //Debug.Log("Character " + character.position + " Camera " + transform.position);
         zoomVector = new Vector3(character.position.x, transform.position.y, character.position.z);
         zoomVectorOut = new Vector3(-zoomVector.x, transform.position.y, -zoomVector.z);
+    }
+
+        private void LateUpdate()
+    {
+        ViewObstructed();
     }
 
 
@@ -95,6 +101,26 @@ public class CameraControl : MonoBehaviour
         }
 
 
+    }
+
+    void ViewObstructed()
+    {       
+        RaycastHit hit;        
+
+        if(Physics.Raycast(transform.position, character.position - transform.position, out hit, 100f))
+        {
+
+            if(hit.collider.gameObject.tag != "Player")
+            {                
+                Obstruction = hit.transform;
+                if (Obstruction.gameObject.GetComponent<MeshRenderer>())
+                    Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+
+            }
+            else
+                if(Obstruction.gameObject.GetComponent<MeshRenderer>())
+                    Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;               
+        }
     }
 
 }
