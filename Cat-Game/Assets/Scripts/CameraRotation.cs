@@ -7,7 +7,7 @@ public class CameraRotation : MonoBehaviour
 {
 
     public Transform pivotPoint;
-    public float rotationSpeed = 20f;
+    public float rotationSpeed = 40f;
 
     private Vector3 pivotOffset;
 
@@ -26,12 +26,12 @@ public class CameraRotation : MonoBehaviour
 
         //https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Keyboard.html
         // check key presses for rotation.
-        if (Keyboard.current.oKey.isPressed)
+        if (Keyboard.current.dKey.isPressed) //right rotation
         {
             // rotate around the pivot point.
             RotateAroundPivot(-rotationAmount);
         }
-        else if (Keyboard.current.pKey.isPressed)
+        else if (Keyboard.current.aKey.isPressed) //left rotation
         {
             // rotate around the pivot point.
             RotateAroundPivot(rotationAmount);

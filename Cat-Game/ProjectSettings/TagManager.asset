@@ -9,6 +9,8 @@ TagManager:
   - floor
   - enemy
   - TransparentTrigger
+  - LevelExit
+  - transition
   layers:
   - Default
   - TransparentFX
