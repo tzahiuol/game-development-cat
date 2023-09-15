@@ -10,53 +10,75 @@ public class CameraControl : MonoBehaviour
 {
     //public Transform pivotPoint;
     public Transform character;
-    //public float rotationSpeed = 20f;
+
+    //a pivot point that the camera moves towards when the zoom out key is pressed
+    private GameObject zoomOutPivot;
+
+
     Transform Obstruction;
     Vector3 offset;
+    Vector3 zoomOutPivotStart;
 
     //Zoom Vector
     //For camera zoom
     Vector3 zoomVector; //defines zoom target
     Vector3 zoomVectorOut; //defines zoom out targer
 
-    public float maxZoomIn = 4f; //to limit the max zoom in
-    public float maxZoomOut = 10f; //to limit the max zoom out 
+    public float maxZoomIn = 2f; //to limit the max zoom in
+    public float maxZoomOut = 20f; //to limit the max zoom out 
 
-    public float lerpSpeed = 0.002f;
+    public float lerpSpeed = 0.012f;
 
 
     private void Start()
     {
         Obstruction = character;
+       
+
         //UoL Lecture 3D Graphics and Animation
         offset = transform.position - character.transform.position;
+
+        //initiate zoom pivot
+        zoomOutPivot = new GameObject("ZoomPivot");
+        zoomOutPivot.transform.position = this.transform.position + offset;
+        zoomOutPivotStart = zoomOutPivot.transform.position;
+        
+
         transform.LookAt(character.position);
     }
 
     void Update()
     {
+
+       
         //zoom in and out
         // check key presses for rotation.
-       //transform.LookAt(character.position);
-        if (Keyboard.current.kKey.isPressed || Keyboard.current.lKey.isPressed)
+        //transform.LookAt(character.position);
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.sKey.isPressed)
         {
             cameraZoom();
+            zoomOutPivot.transform.position = this.transform.position + offset + (this.transform.position - character.transform.position);
+            zoomOutPivot.transform.rotation = this.transform.rotation;
+            zoomVector = new Vector3(character.position.x, character.position.y, character.position.z);
+            zoomVectorOut = new Vector3(zoomOutPivot.transform.position.x, zoomOutPivot.transform.position.y, zoomOutPivot.transform.position.z);
+        }
+        else
+        {
+            //// follow the character
+            Vector3 targetPosition = character.position + offset;
+            ////smooth camera transition 
+            //transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
+
+
+
+            //transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
+            ////https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
+            transform.LookAt(character.position);
         }
 
 
-        //// follow the character
-        Vector3 targetPosition = character.position + offset;
-        ////smooth camera transition 
-        //transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
         
         
-
-        //transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
-        ////https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
-        transform.LookAt(character.position);
-        //Debug.Log("Character " + character.position + " Camera " + transform.position);
-        zoomVector = new Vector3(character.position.x, transform.position.y, character.position.z);
-        zoomVectorOut = new Vector3(-zoomVector.x, transform.position.y, -zoomVector.z);
     }
 
         private void LateUpdate()
@@ -78,7 +100,7 @@ public class CameraControl : MonoBehaviour
         float diffZ = Math.Abs(character.position.z - transform.position.z);
         float diffY = Math.Abs(character.position.y - transform.position.y);
 
-        if (Keyboard.current.kKey.isPressed) //Zoom In
+        if (Keyboard.current.wKey.isPressed) //Zoom In
             {
                 //compare absolute difference with zoom constraint 
                 if ((diffX >= maxZoomIn) &&
@@ -89,7 +111,7 @@ public class CameraControl : MonoBehaviour
                 }
 
             }
-            else if(Keyboard.current.lKey.isPressed) //Zoom Out
+            else if(Keyboard.current.sKey.isPressed) //Zoom Out
             {
             if ((diffX <= maxZoomOut) &&
                 (diffZ <= maxZoomOut))
