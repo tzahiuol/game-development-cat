@@ -29,6 +29,14 @@ public class ColliosionHandler : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (gameObject.transform.position.y < -10)
+        {
+            Restart();
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {

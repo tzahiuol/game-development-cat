@@ -200,6 +200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871445316690164184, guid: 50179935bf5ebe14786a20fade2a282d,
         type: 3}
+      propertyPath: TimerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871445316690164184, guid: 50179935bf5ebe14786a20fade2a282d,
+        type: 3}
       propertyPath: InitalTime
       value: 120
       objectReference: {fileID: 0}
@@ -238,7 +243,7 @@ Material:
     - _UseUIAlphaClip: 0
     m_Colors:
     - _WidthHeightRadius: {r: 209.15552, g: 51.361874, b: 80, a: 0}
---- !u!21 &1935167934
+--- !u!21 &1655340930
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -387,6 +392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 854663119454743148, guid: 3199966905ae9d347850f698851b6422,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854663119842289263, guid: 3199966905ae9d347850f698851b6422,
         type: 3}
