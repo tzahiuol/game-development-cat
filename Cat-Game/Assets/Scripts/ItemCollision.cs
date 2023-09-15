@@ -12,6 +12,8 @@ public class ItemCollision : MonoBehaviour
     public GameObject levelPassage;
     Scene scene;
 
+
+    public Animator keyAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class ItemCollision : MonoBehaviour
     //check for collissions with item
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         if (other.gameObject.tag == "collectible")
         {
            //increase collected item count
@@ -36,8 +39,16 @@ public class ItemCollision : MonoBehaviour
            
             //pass item to CheckItems 
             CheckItems(other.gameObject);
+
+            other.gameObject.GetComponent<Animator>().SetTrigger("Collected");
+
             //make object inactive, since we still need information for CheckItems function
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
+        }
+        if(other.gameObject.tag == "transition") //check for collission with transition collider
+        {
+            Debug.Log("Scene Transition");
+            StartCoroutine(LoadNextLevelAfterDelay(2.0f, "Level2"));
         }
     }
 
@@ -57,5 +68,13 @@ public class ItemCollision : MonoBehaviour
                 Debug.Log("Ok");
             }
         }
+    }
+
+    //https://discussions.unity.com/t/what-are-ienumerator-and-coroutine/143510/2
+    IEnumerator LoadNextLevelAfterDelay(float delay, string nextLevelName)
+    {
+        //https://docs.unity3d.com/ScriptReference/WaitForSeconds.html
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(nextLevelName);
     }
 }
