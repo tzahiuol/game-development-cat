@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float TimeLeft;
+    public float InitalTime;
+
+    private float TimeLeft;
     public bool TimerOn = false;
 
     public Text TimerText;
@@ -32,6 +34,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         TimerOn = true;
+        TimeLeft = InitalTime;
     }
 
     // Update is called once per frame
@@ -49,9 +52,14 @@ public class Timer : MonoBehaviour
                 TimeLeft = 0;
                 TimerOn = false;
             }
-            Debug.Log(string.Format("Timer left {0}",TimeLeft));
         }
         
+    }
+
+    public void Restart()
+    {
+        print("Restarting");
+        TimeLeft = InitalTime;
     }
 
     void UpdateText(float currentTime)
@@ -63,7 +71,6 @@ public class Timer : MonoBehaviour
 
         string newText = string.Format("{0:00}:{1:00}", minutes, seconds);
         TimerText.text = newText;
-        Debug.Log(string.Format("Updated string to: {0}", newText));
 
     }
 }

@@ -14,10 +14,12 @@ public class ColliosionHandler : MonoBehaviour
     private Vector3 catPos;
     private Quaternion catRotation;
 
+    private Timer timer;
     void Start()
     {
         catPos = cat.position;
         catRotation = cat.transform.rotation;
+        timer = FindObjectOfType<Timer>();
     }
 
     void OnCollisionEnter(Collision other){
@@ -35,11 +37,15 @@ public class ColliosionHandler : MonoBehaviour
         {
             lives--;
             Debug.Log(lives);
-            //respawn to the beginning 
-            gameObject.transform.rotation = catRotation;
-            gameObject.transform.position = catPos;
-            
+            Restart();
         }
+    }
+
+    public void Restart()
+    {
+        gameObject.transform.rotation = catRotation;
+        gameObject.transform.position = catPos;
+        timer.Restart();
     }
 
     public void Shove(){
