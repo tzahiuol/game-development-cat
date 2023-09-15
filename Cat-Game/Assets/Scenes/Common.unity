@@ -200,12 +200,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871445316690164184, guid: 50179935bf5ebe14786a20fade2a282d,
         type: 3}
+      propertyPath: TimerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871445316690164184, guid: 50179935bf5ebe14786a20fade2a282d,
+        type: 3}
       propertyPath: InitalTime
       value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50179935bf5ebe14786a20fade2a282d, type: 3}
---- !u!21 &832832584
+--- !u!21 &981434768
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -238,7 +243,7 @@ Material:
     - _UseUIAlphaClip: 0
     m_Colors:
     - _WidthHeightRadius: {r: 209.15552, g: 51.361874, b: 80, a: 0}
---- !u!21 &981434768
+--- !u!21 &1655340930
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
