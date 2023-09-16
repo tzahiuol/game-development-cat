@@ -5,7 +5,7 @@ using UnityEngine;
 public class FreezerCollider : MonoBehaviour
 {
 
-  
+    //https://docs.unity3d.com/ScriptReference/Animator.html
     public Animator fridgeAnimator;
 
     //sets a bool to tell the scrip whether the lifts needs to go down or up for the first time
@@ -17,6 +17,7 @@ public class FreezerCollider : MonoBehaviour
         
     }
 
+    //https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter.html
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

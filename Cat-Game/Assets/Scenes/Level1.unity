@@ -322,6 +322,11 @@ PrefabInstance:
       propertyPath: liftInitialUp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8337815358025267620, guid: a55f701b54df74741adda920f8525991,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a55f701b54df74741adda920f8525991, type: 3}
 --- !u!1 &63571807
@@ -6419,6 +6424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Interpolate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
+        type: 3}
+      propertyPath: acceleration
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8983697511508842668, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}

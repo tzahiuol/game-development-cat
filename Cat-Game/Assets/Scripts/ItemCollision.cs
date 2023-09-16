@@ -15,7 +15,8 @@ public class ItemCollision : MonoBehaviour
 
     public Animator keyAnimation;
 
-
+    //https://docs.unity3d.com/ScriptReference/AudioSource.html
+    //https://docs.unity3d.com/ScriptReference/AudioClip.html
     //audio sources 
     [SerializeField]
     private AudioSource audioSource;

@@ -102,6 +102,7 @@ public class CameraControl : MonoBehaviour
         float diffZ = Math.Abs(character.position.z - transform.position.z);
         float diffY = Math.Abs(character.position.y - transform.position.y);
 
+        //https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.Keyboard.html
         if (Keyboard.current.wKey.isPressed) //Zoom In
             {
                 //compare absolute difference with zoom constraint 
@@ -118,6 +119,7 @@ public class CameraControl : MonoBehaviour
             if ((diffX <= maxZoomOut) &&
                 (diffZ <= maxZoomOut))
             {
+                //https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
                 transform.LookAt(character.position);
                 transform.position = Vector3.Lerp(transform.position, zoomVectorOut, lerpSpeed);
                 
