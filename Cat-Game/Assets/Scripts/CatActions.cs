@@ -82,8 +82,11 @@ public class CatActions : MonoBehaviour
 
     public void Jump(){
         // Apply a higher jump force to simulate cat-like jumping
-        rb.AddForce(transform.up * jumpForce * jumpMultiplier, ForceMode.Impulse);        
-        onGround = false;
+        if (onGround == true)
+        {
+            rb.AddForce(transform.up * jumpForce * jumpMultiplier, ForceMode.Impulse);
+            onGround = false;
+        }
     }
 
     void OnShove(InputValue input){

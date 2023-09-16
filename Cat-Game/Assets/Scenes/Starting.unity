@@ -458,7 +458,9 @@ MonoBehaviour:
     [D] - Rotate camera left
 
     [S]
-    - Rotate camera right'
+    - Rotate camera right
+
+    [ESC] - Open menu'
 --- !u!222 &557059032
 CanvasRenderer:
   m_ObjectHideFlags: 0
