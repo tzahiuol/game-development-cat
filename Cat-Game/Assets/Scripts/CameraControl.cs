@@ -25,9 +25,9 @@ public class CameraControl : MonoBehaviour
     Vector3 zoomVectorOut; //defines zoom out targer
 
     public float maxZoomIn = 2f; //to limit the max zoom in
-    public float maxZoomOut = 20f; //to limit the max zoom out 
+    public float maxZoomOut = 30f; //to limit the max zoom out 
 
-    public float lerpSpeed = 0.012f;
+    public float lerpSpeed = 0.02f;
 
 
     private void Start()
@@ -73,12 +73,14 @@ public class CameraControl : MonoBehaviour
 
             //transform.position = Vector3.Lerp(transform.position, targetPosition, 0f);
             ////https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
+            if (Keyboard.current.upArrowKey.isPressed || Keyboard.current.rightArrowKey.isPressed )
+            {
+                Debug.Log("It is pressed");
+                //transform.LookAt(character.position);
+            }
             transform.LookAt(character.position);
         }
-
-
-        
-        
+ 
     }
 
         private void LateUpdate()
