@@ -16,6 +16,7 @@ public class ColliosionHandler : MonoBehaviour
     public Transform cat;
     private Vector3 catPos;
     private Quaternion catRotation;
+    private CatActions catActionScript;
 
     private Timer timer;
     private HeartManager heartManager;
@@ -30,9 +31,10 @@ public class ColliosionHandler : MonoBehaviour
 
     void Start()
     {
-       //initialise audio source
-       audioSource = GetComponent<AudioSource>();
- 
+        catActionScript = GetComponent<CatActions>();
+        //initialise audio source
+        audioSource = GetComponent<AudioSource>();
+  
         lives = initialLives;
         catPos = cat.position;
         catRotation = cat.transform.rotation;
@@ -71,9 +73,13 @@ public class ColliosionHandler : MonoBehaviour
 
     public void LoseLife()
     {
+        
         lives--;
         Debug.Log("Losing life, now at: " + lives);
         heartManager.LoseHeart();
+        GetComponent<CatActions>().setDeath(true);
+        GetComponent<CatActions>().enabled = false;
+        Invoke("killKitty", 2f);
         if (lives == 0)
         {
             EndGame(false);
@@ -83,6 +89,7 @@ public class ColliosionHandler : MonoBehaviour
             PlaySound(hit);
             RestartPosition();
         }
+
     }
 
     public void EndGame(bool isByTimer)
@@ -123,10 +130,39 @@ public class ColliosionHandler : MonoBehaviour
     public void Shove(){
 
     }
+
+    private void killKitty()
+    {
+        if (lives == 0)
+        {
+            EndGame(false);
+        }
+        else
+        {
+            RestartPosition();
+            GetComponent<CatActions>().setDeath(false);
+            GetComponent<CatActions>().enabled = true;
+        }
+
+    }
     //takes the sound clip as an argument
     void PlaySound(AudioClip soundClip)
     {
         audioSource.clip = soundClip;
         audioSource.Play();
+    }
+
+    private void killKitty(){
+         if (lives == 0)
+        {
+            EndGame(false);
+        }
+        else
+        {
+            RestartPosition(); 
+            GetComponent<CatActions>().setDeath(false); 
+            GetComponent<CatActions>().enabled = true;          
+        }
+        
     }
 }
