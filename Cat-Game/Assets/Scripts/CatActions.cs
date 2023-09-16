@@ -14,14 +14,14 @@ public class CatActions : MonoBehaviour
     bool shoveItem = false;
     bool onGround = false;
     bool walking = false;
-    [SerializeField] float moveSpeed = 1;
-    [SerializeField] float turnSpeed = 1;
-    [SerializeField] float jumpForce = 1;
+    [SerializeField] float moveSpeed = 1000;
+    [SerializeField] float turnSpeed = 100;
+    [SerializeField] float jumpForce = 30;
 
     Vector3 moveForce; 
     
     // Adjust these values for more cat-like movement
-    [SerializeField] float acceleration = 5;
+    [SerializeField] float acceleration = 1000;
     [SerializeField] float maxMoveSpeed = 3;
     [SerializeField] float jumpMultiplier = 1.5f;
 
@@ -37,24 +37,21 @@ public class CatActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // Calculate the desired movement direction
-        Vector3 desiredMoveDirection = transform.forward * movementVec.z + transform.right * movementVec.x;
+        // Vector3 desiredMoveDirection = transform.forward * movementVec.z + transform.right * movementVec.x;
+        Vector3 desiredMoveDirection = transform.forward * movementVec.z ;
 
         // Apply acceleration to the cat's movement
         moveForce = desiredMoveDirection * acceleration * Time.deltaTime;
+        // moveForce = desiredMoveDirection * acceleration;
+        
         rb.AddForce(moveForce);
+        Vector3 rotation = new Vector3(0,movementVec.x,0) * turnSpeed * Time.deltaTime;
+        transform.Rotate(rotation);      
+
 
         // Limit the cat's maximum movement speed
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);
-
-        // Apply torque for turning
-        if (movementVec.x != 0)
-            rb.AddTorque(transform.up * movementVec.x * turnSpeed);
-
-        // Play walk animation when moving
-        // anim.SetBool("Walk", rb.velocity.magnitude > 0.1f);
-        // }      
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);     
         
         shoveItem = false;
     }
