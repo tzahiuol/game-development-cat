@@ -32,9 +32,7 @@ public class MoveBetweenMenu : MonoBehaviour
         }
         else
         {
-            UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("Starting");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level1",LoadSceneMode.Single);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Common",LoadSceneMode.Additive);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
         }
         currentIndex++;
         if (currentIndex + 1 == screenInOrder.Length)

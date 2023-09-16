@@ -54,7 +54,6 @@ public class ItemCollision : MonoBehaviour
             CheckItems(other.gameObject);
 
             other.gameObject.GetComponent<Animator>().SetTrigger("Collected");
-
             GameObject.FindObjectOfType<KeysManager>().FoundKey();
 
             //make object inactive, since we still need information for CheckItems function

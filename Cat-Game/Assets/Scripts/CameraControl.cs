@@ -141,7 +141,6 @@ public class CameraControl : MonoBehaviour
             }
             else
             {
-                Debug.Log("Test");
                 if(Obstruction.gameObject.GetComponent<MeshRenderer>()){
                     Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
                 }
