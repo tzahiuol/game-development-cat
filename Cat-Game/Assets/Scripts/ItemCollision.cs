@@ -55,13 +55,15 @@ public class ItemCollision : MonoBehaviour
 
             other.gameObject.GetComponent<Animator>().SetTrigger("Collected");
 
+            GameObject.FindObjectOfType<KeysManager>().FoundKey();
+
             //make object inactive, since we still need information for CheckItems function
             //other.gameObject.SetActive(false);
         }
         if(other.gameObject.tag == "transition") //check for collission with transition collider
         {
             Debug.Log("Scene Transition");
-            StartCoroutine(LoadNextLevelAfterDelay(2.0f, "Level2"));
+            StartCoroutine(LoadNextLevelAfterDelay(2.0f, 2));
         }
     }
 
@@ -87,11 +89,16 @@ public class ItemCollision : MonoBehaviour
     }
 
     //https://discussions.unity.com/t/what-are-ienumerator-and-coroutine/143510/2
-    IEnumerator LoadNextLevelAfterDelay(float delay, string nextLevelName)
+    IEnumerator LoadNextLevelAfterDelay(float delay, int level)
     {
         //https://docs.unity3d.com/ScriptReference/WaitForSeconds.html
         yield return new WaitForSeconds(delay); //to delay the transition of the levels
-        SceneManager.LoadScene(nextLevelName);
+
+        string prefixLevel = "Level";
+        SceneManager.LoadScene(prefixLevel + level, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(prefixLevel + level);
+
+        GameObject.FindObjectOfType<KeysManager>().Restart();
     }
 
     void PlaySound(AudioClip soundClip)
