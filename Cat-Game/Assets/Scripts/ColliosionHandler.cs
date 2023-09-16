@@ -29,6 +29,9 @@ public class ColliosionHandler : MonoBehaviour
     public AudioClip hit;
     public AudioClip gameOver;
 
+    //transparentMaterial
+    public Material transparentMaterial;
+
     void Start()
     {
         catActionScript = GetComponent<CatActions>();
@@ -69,6 +72,22 @@ public class ColliosionHandler : MonoBehaviour
             LoseLife();
             
         }
+        if(other.gameObject.tag == "TransparentTrigger") //https://stackoverflow.com/questions/48255184/how-to-change-the-material-on-a-trigger#:~:text=1%20Answer&text=Get%20the%20Renderer%20component%20on,(Collider%20other)%20%7B%20other.
+        {
+            //change the material of object with tag transparentobject
+            Debug.Log("In Tunnel");
+            GameObject[] transparentObjects  = GameObject.FindGameObjectsWithTag("TransparentObject");
+
+            foreach (GameObject transparentObject in transparentObjects)
+            {
+                Renderer rendering = transparentObject.GetComponent<Renderer>();
+                if (rendering != null)
+                {
+                    rendering.material = transparentMaterial;
+                }
+            }
+        }
+
     }
 
     public void LoseLife()
