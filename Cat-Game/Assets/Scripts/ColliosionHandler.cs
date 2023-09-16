@@ -22,8 +22,17 @@ public class ColliosionHandler : MonoBehaviour
 
     private GameObject gameOverPanel;
 
+    //audio sources 
+    [SerializeField]
+    private AudioSource audioSource;
+    public AudioClip hit;
+    public AudioClip gameOver;
+
     void Start()
     {
+       //initialise audio source
+       audioSource = GetComponent<AudioSource>();
+ 
         lives = initialLives;
         catPos = cat.position;
         catRotation = cat.transform.rotation;
@@ -56,6 +65,7 @@ public class ColliosionHandler : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             LoseLife();
+            
         }
     }
 
@@ -70,6 +80,7 @@ public class ColliosionHandler : MonoBehaviour
         }
         else
         {
+            PlaySound(hit);
             RestartPosition();
         }
     }
@@ -77,6 +88,7 @@ public class ColliosionHandler : MonoBehaviour
     public void EndGame(bool isByTimer)
     {
         gameOverPanel.SetActive(true);
+        PlaySound(gameOver);
         string text = "Cats normally have 9 lives, you had 3..";
         if (isByTimer)
         {
@@ -110,5 +122,11 @@ public class ColliosionHandler : MonoBehaviour
 
     public void Shove(){
 
+    }
+    //takes the sound clip as an argument
+    void PlaySound(AudioClip soundClip)
+    {
+        audioSource.clip = soundClip;
+        audioSource.Play();
     }
 }

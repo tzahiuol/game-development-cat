@@ -14,9 +14,20 @@ public class ItemCollision : MonoBehaviour
 
 
     public Animator keyAnimation;
+
+
+    //audio sources 
+    [SerializeField]
+    private AudioSource audioSource;
+    public AudioClip allItems;
+    public AudioClip itemCollected;
+
     // Start is called before the first frame update
     void Start()
     {
+        //initialise audio source
+        audioSource = this.GetComponent<AudioSource>();
+
         collectedItems = 0;
         //https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.GetActiveScene.html
         scene = SceneManager.GetActiveScene();
@@ -34,9 +45,11 @@ public class ItemCollision : MonoBehaviour
         Debug.Log(other);
         if (other.gameObject.tag == "collectible")
         {
-           //increase collected item count
+            PlaySound(itemCollected);
+            
+            //increase collected item count
             collectedItems++;
-           
+         
             //pass item to CheckItems 
             CheckItems(other.gameObject);
 
@@ -60,6 +73,9 @@ public class ItemCollision : MonoBehaviour
         if (collectedItems >= 3)
         {
             levelPassage.SetActive(true);
+            //plays the sound to signify that all items were collected
+            PlaySound(allItems);
+
         }
         else if( scene.name == "Level1")
         {
@@ -74,7 +90,13 @@ public class ItemCollision : MonoBehaviour
     IEnumerator LoadNextLevelAfterDelay(float delay, string nextLevelName)
     {
         //https://docs.unity3d.com/ScriptReference/WaitForSeconds.html
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(delay); //to delay the transition of the levels
         SceneManager.LoadScene(nextLevelName);
+    }
+
+    void PlaySound(AudioClip soundClip)
+    {
+        audioSource.clip = soundClip;
+        audioSource.Play();
     }
 }
