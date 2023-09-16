@@ -106,6 +106,8 @@ public class ColliosionHandler : MonoBehaviour
         RestartPosition();
         heartManager.Restart();
         lives = initialLives;
+        GetComponent<CatActions>().setDeath(false);
+        GetComponent<CatActions>().enabled = true;
     }
 
     public void Shove(){
