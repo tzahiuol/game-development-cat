@@ -152,17 +152,5 @@ public class ColliosionHandler : MonoBehaviour
         audioSource.Play();
     }
 
-    private void killKitty(){
-         if (lives == 0)
-        {
-            EndGame(false);
-        }
-        else
-        {
-            RestartPosition(); 
-            GetComponent<CatActions>().setDeath(false); 
-            GetComponent<CatActions>().enabled = true;          
-        }
-        
-    }
+
 }
