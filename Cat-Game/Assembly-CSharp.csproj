@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\CatActions.cs" />
      <Compile Include="Assets\Scripts\ColliosionHandler.cs" />
      <Compile Include="Assets\Scripts\ItemCollision.cs" />
+     <Compile Include="Assets\Scripts\LiftAnimation.cs" />
      <Compile Include="Assets\Scripts\RotateWorld.cs" />
      <Compile Include="Assets\Starting Scene\MoveBetweenMenu.cs" />
      <Compile Include="Assets\VIRTI\VOXEL-Forniture-FREE\Example\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />

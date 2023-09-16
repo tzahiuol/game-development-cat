@@ -12,6 +12,8 @@ TagManager:
   - LevelExit
   - transition
   - Wall
+  - TransparentObject
+  - Lift
   layers:
   - Default
   - TransparentFX
