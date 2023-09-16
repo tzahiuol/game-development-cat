@@ -99,4 +99,8 @@ public class CatActions : MonoBehaviour
     void OnCollisionExit(){
         onGround = false;
     }
+
+    public void Died(){
+        anim.SetTrigger("Died");
+    }
 }
