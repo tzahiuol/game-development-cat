@@ -435,6 +435,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1321690549314907270, guid: a5a02db532599954084c228fd7656fdf,
+        type: 3}
+      propertyPath: m_Name
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 1321690549349687600, guid: a5a02db532599954084c228fd7656fdf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -555,6 +560,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 1321690549812499395, guid: a5a02db532599954084c228fd7656fdf,
+        type: 3}
+      propertyPath: m_Name
+      value: DescriptionText
+      objectReference: {fileID: 0}
     - target: {fileID: 1321690549812499421, guid: a5a02db532599954084c228fd7656fdf,
         type: 3}
       propertyPath: m_Text
@@ -575,6 +585,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1321690550061275434, guid: a5a02db532599954084c228fd7656fdf,
+        type: 3}
+      propertyPath: m_Name
+      value: GameOverText
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a02db532599954084c228fd7656fdf, type: 3}
 --- !u!1001 &8497915465578227676
@@ -584,6 +599,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1077237260440079155, guid: 50179935bf5ebe14786a20fade2a282d,
+        type: 3}
+      propertyPath: InitalTime
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 5829113383686292630, guid: 50179935bf5ebe14786a20fade2a282d,
         type: 3}
       propertyPath: m_Name

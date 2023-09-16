@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ColliosionHandler : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class ColliosionHandler : MonoBehaviour
     private HeartManager heartManager;
 
     private GameObject gameOverPanel;
+
     void Start()
     {
         lives = initialLives;
@@ -64,13 +66,32 @@ public class ColliosionHandler : MonoBehaviour
         heartManager.LoseHeart();
         if (lives == 0)
         {
-            gameOverPanel.SetActive(true);
-            Time.timeScale = 0f;
+            EndGame(false);
         }
         else
         {
             RestartPosition();
         }
+    }
+
+    public void EndGame(bool isByTimer)
+    {
+        gameOverPanel.SetActive(true);
+        string text = "Cats normally have 9 lives, you had 3..";
+        if (isByTimer)
+        {
+            text = "10 minutes wasn't enough?";
+        }
+        var textChildren = gameOverPanel.GetComponentsInChildren<Text>();
+        for (int i = 0; i < textChildren.Length; i++)
+        {
+            if (textChildren[i].name == "DescriptionText")
+            {
+                textChildren[i].text = text;
+            }
+        }
+
+        Time.timeScale = 0f;
     }
 
     private void RestartPosition()

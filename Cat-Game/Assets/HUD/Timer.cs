@@ -50,15 +50,23 @@ public class Timer : MonoBehaviour
             {
                 TimeLeft = 0;
                 TimerOn = false;
+                TimeIsUp();
             }
         }
         
+    }
+
+    private void TimeIsUp()
+    {
+        ColliosionHandler ch = FindObjectOfType<ColliosionHandler>();
+        ch.EndGame(true);
     }
 
     public void Restart()
     {
         print("Restarting");
         TimeLeft = InitalTime;
+        TimerOn = true;
     }
 
     void UpdateText(float currentTime)
