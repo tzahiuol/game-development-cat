@@ -9,6 +9,7 @@ public class CatActions : MonoBehaviour
     Vector3 movementVec;
     Animator anim;
     Rigidbody rb;
+    
     // CollisionHandler ch;
     bool shoveItem = false;
     bool onGround = false;
@@ -27,6 +28,7 @@ public class CatActions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         // ch = GetComponent<CollisionHandler>();
@@ -100,7 +102,7 @@ public class CatActions : MonoBehaviour
         onGround = false;
     }
 
-    public void Died(){
-        anim.SetTrigger("Died");
+    public void setDeath(bool aliveStat){
+        anim.SetBool("Died", aliveStat);
     }
 }
