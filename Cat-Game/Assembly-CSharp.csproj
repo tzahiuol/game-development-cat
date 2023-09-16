@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Animations\Quirky Series Ultimate\_Scripts\Demo.cs" />
-     <Compile Include="Assets\HUD\Timer\Timer.cs" />
+     <Compile Include="Assets\HUD\EndGame.cs" />
+     <Compile Include="Assets\HUD\HeartManager.cs" />
+     <Compile Include="Assets\HUD\Timer.cs" />
      <Compile Include="Assets\PauseMenu\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CameraRotation.cs" />

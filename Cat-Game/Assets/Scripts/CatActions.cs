@@ -62,7 +62,6 @@ public class CatActions : MonoBehaviour
         Vector2 xyInput = input.Get<Vector2>();        
         movementVec = new Vector3(xyInput.x, 0, xyInput.y);
 
-        Debug.Log(xyInput.magnitude);
 
         if (xyInput.magnitude > 0)
            anim.SetBool("Walk", true);

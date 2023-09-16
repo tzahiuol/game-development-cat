@@ -2,24 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 
 public class ColliosionHandler : MonoBehaviour
 {
     //count the cats lives
     [SerializeField]
-    private int lives = 3;
+    private int initialLives = 3;
+
+    private int lives;
 
     public Transform cat;
     private Vector3 catPos;
     private Quaternion catRotation;
 
     private Timer timer;
+    private HeartManager heartManager;
+
+    private GameObject gameOverPanel;
     void Start()
     {
+        lives = initialLives;
         catPos = cat.position;
         catRotation = cat.transform.rotation;
         timer = FindObjectOfType<Timer>();
+        heartManager = FindObjectOfType<HeartManager>();
+        gameOverPanel = GameObject.Find("GameOver");
+
+        gameOverPanel.SetActive(false);
     }
 
     void OnCollisionEnter(Collision other){
@@ -33,7 +43,7 @@ public class ColliosionHandler : MonoBehaviour
     {
         if (gameObject.transform.position.y < -10)
         {
-            Restart();
+            LoseLife();
         }
     }
 
@@ -43,17 +53,38 @@ public class ColliosionHandler : MonoBehaviour
         //handles enemy collisions
         if (other.gameObject.tag == "enemy")
         {
-            lives--;
-            Debug.Log(lives);
-            Restart();
+            LoseLife();
         }
+    }
+
+    public void LoseLife()
+    {
+        lives--;
+        Debug.Log("Losing life, now at: " + lives);
+        heartManager.LoseHeart();
+        if (lives == 0)
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            RestartPosition();
+        }
+    }
+
+    private void RestartPosition()
+    {
+        gameObject.transform.rotation = catRotation;
+        gameObject.transform.position = catPos;
     }
 
     public void Restart()
     {
-        gameObject.transform.rotation = catRotation;
-        gameObject.transform.position = catPos;
         timer.Restart();
+        RestartPosition();
+        heartManager.Restart();
+        lives = initialLives;
     }
 
     public void Shove(){

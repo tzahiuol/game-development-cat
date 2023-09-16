@@ -4734,6 +4734,10 @@ PrefabInstance:
       propertyPath: levelPassage
       value: 
       objectReference: {fileID: 553930303}
+    - target: {fileID: 353038474, guid: 6db1407b82e3a5d4f8c768cf60ecc783, type: 3}
+      propertyPath: initialLives
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2332405127875501009, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: m_Name
