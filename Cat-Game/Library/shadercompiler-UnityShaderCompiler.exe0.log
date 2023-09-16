@@ -6,8 +6,6 @@ Cmd: preprocess
   insize=3183 outsize=321 ok=1
 Cmd: preprocessCompute
   insize=3267 outsize=3273 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=3273 outsize=1916 ok=1
 Cmd: preprocess
   insize=6814 outsize=496 ok=1
 Cmd: preprocess
@@ -22,12 +20,8 @@ Cmd: preprocess
   insize=3437 outsize=244 ok=1
 Cmd: preprocessCompute
   insize=2341 outsize=2343 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=2343 outsize=1334 ok=1
 Cmd: preprocessCompute
   insize=1431 outsize=1435 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=1435 outsize=1557 ok=1
 Cmd: preprocess
   insize=6238 outsize=1027 ok=1
 Cmd: preprocess
@@ -60,13 +54,5 @@ Cmd: preprocess
   insize=983 outsize=298 ok=1
 Cmd: preprocessCompute
   insize=1522 outsize=1526 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=1526 outsize=1520 ok=1
 Cmd: preprocess
   insize=1623 outsize=1101 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=5661 outsize=2054 kw=WATER_EDGEBLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=5661 outsize=2414 kw=WATER_EDGEBLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-
-Quitting shader compiler process
