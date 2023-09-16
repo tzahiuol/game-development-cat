@@ -11,6 +11,7 @@ TagManager:
   - TransparentTrigger
   - LevelExit
   - transition
+  - Wall
   layers:
   - Default
   - TransparentFX

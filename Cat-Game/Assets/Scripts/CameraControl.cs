@@ -132,7 +132,7 @@ public class CameraControl : MonoBehaviour
         if(Physics.Raycast(transform.position, character.position - transform.position, out hit, 100f))
         {
 
-            if(hit.collider.gameObject.tag != "Player")
+            if(hit.collider.gameObject.tag != "Player" && hit.collider.tag == "Wall")
             {                
                 Obstruction = hit.transform;
                 if (Obstruction.gameObject.GetComponent<MeshRenderer>())
@@ -140,8 +140,14 @@ public class CameraControl : MonoBehaviour
 
             }
             else
-                if(Obstruction.gameObject.GetComponent<MeshRenderer>())
-                    Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;               
+            {
+                Debug.Log("Test");
+                if(Obstruction.gameObject.GetComponent<MeshRenderer>()){
+                    Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                }
+                    
+            }
+                               
         }
     }
 

@@ -70,8 +70,7 @@ public class CatActions : MonoBehaviour
    
     }
 
-    public void OnJump(InputValue input){
-        
+    public void OnJump(InputValue input){        
         
         if (onGround){            
             anim.SetTrigger("Jump");
