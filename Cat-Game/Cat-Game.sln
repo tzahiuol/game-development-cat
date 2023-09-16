@@ -5,8 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{e5aca0b1-7a16-f732-b8b9-6cea4763e754}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1de8918a-2f2e-070c-f326-4f529a4f720b}"
 EndProject
+=======
+>>>>>>> Character_movement
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem", "Unity.InputSystem.csproj", "{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro", "Unity.TextMeshPro.csproj", "{4913223d-32d9-f94d-b403-1ee982fcd827}"
@@ -15,14 +18,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Timeline", "Unity.Tim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinemachine", "Cinemachine.csproj", "{9f722295-94f3-9447-92af-40101e9d6583}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1de8918a-2f2e-070c-f326-4f529a4f720b}"
+EndProject
+>>>>>>> Character_movement
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.TestRunner", "UnityEditor.TestRunner.csproj", "{74e648fe-3f2c-068b-6cbe-8f4354000f15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro.Editor", "Unity.TextMeshPro.Editor.csproj", "{9c00f743-99ff-90e5-37d7-62ceb94189a6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Timeline.Editor", "Unity.Timeline.Editor.csproj", "{c6b54ea3-7ccc-7b9a-878a-9ad83d404217}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{be95b9fc-1739-f934-a2f1-e9c003605a21}"
 EndProject
+=======
+>>>>>>> Character_movement
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.unity.cinemachine.editor", "com.unity.cinemachine.editor.csproj", "{a7c9eda5-b35e-42df-66b8-ef491799a283}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.UI", "UnityEditor.UI.csproj", "{f758dcc2-79a0-4358-fad3-57d8e607dfd0}"
@@ -42,8 +53,11 @@ Global
 		{a393353f-06d0-ee8d-f4d3-b2996ac8049d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e5aca0b1-7a16-f732-b8b9-6cea4763e754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e5aca0b1-7a16-f732-b8b9-6cea4763e754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+<<<<<<< HEAD
 		{1de8918a-2f2e-070c-f326-4f529a4f720b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1de8918a-2f2e-070c-f326-4f529a4f720b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+=======
+>>>>>>> Character_movement
 		{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3fe9945f-b9c3-409e-9d2f-7d5c7aeda571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4913223d-32d9-f94d-b403-1ee982fcd827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -52,14 +66,22 @@ Global
 		{96f27780-5f97-e17a-80d6-abf8794903a3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9f722295-94f3-9447-92af-40101e9d6583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9f722295-94f3-9447-92af-40101e9d6583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+<<<<<<< HEAD
+=======
+		{1de8918a-2f2e-070c-f326-4f529a4f720b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1de8918a-2f2e-070c-f326-4f529a4f720b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+>>>>>>> Character_movement
 		{74e648fe-3f2c-068b-6cbe-8f4354000f15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74e648fe-3f2c-068b-6cbe-8f4354000f15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9c00f743-99ff-90e5-37d7-62ceb94189a6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9c00f743-99ff-90e5-37d7-62ceb94189a6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c6b54ea3-7ccc-7b9a-878a-9ad83d404217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c6b54ea3-7ccc-7b9a-878a-9ad83d404217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+<<<<<<< HEAD
 		{be95b9fc-1739-f934-a2f1-e9c003605a21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{be95b9fc-1739-f934-a2f1-e9c003605a21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+=======
+>>>>>>> Character_movement
 		{a7c9eda5-b35e-42df-66b8-ef491799a283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a7c9eda5-b35e-42df-66b8-ef491799a283}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f758dcc2-79a0-4358-fad3-57d8e607dfd0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
