@@ -36,7 +36,7 @@ public class CatActions : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         targetRotation = transform.rotation;
-        // ch = GetComponent<CollisionHandler>();
+        
     }
 
     // Update is called once per frame
@@ -47,16 +47,16 @@ public class CatActions : MonoBehaviour
         Vector3 desiredMoveDirection = transform.forward * movementVec.z ;
 
         // Apply acceleration to the cat's movement
-        moveForce = desiredMoveDirection * acceleration * Time.deltaTime;
-        // moveForce = desiredMoveDirection * acceleration;
-        
-        rb.AddForce(moveForce);
+        // moveForce = desiredMoveDirection * acceleration * Time.deltaTime;
+
+        rb.MovePosition(rb.position + desiredMoveDirection * Time.deltaTime * acceleration);
+                
         Vector3 rotation = new Vector3(0,movementVec.x,0) * turnSpeed * Time.deltaTime;
         transform.Rotate(rotation);
 
 
         // Limit the cat's maximum movement speed
-
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed); 
         // Apply torque for turning
         // For rotation
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -70,10 +70,8 @@ public class CatActions : MonoBehaviour
             targetRotation *= Quaternion.Euler(0, rotationAmount, 0);
         }
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
-        // Play walk animation when moving
-        // anim.SetBool("Walk", rb.velocity.magnitude > 0.1f);
-        // }  
-        //rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);     
+           
+
         
         
     }
