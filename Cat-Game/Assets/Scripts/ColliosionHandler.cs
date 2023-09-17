@@ -23,6 +23,8 @@ public class ColliosionHandler : MonoBehaviour
 
     private GameObject gameOverPanel;
 
+    private GameObject gameWonPanel;
+
     //audio sources 
     [SerializeField]
     private AudioSource audioSource;
@@ -44,8 +46,10 @@ public class ColliosionHandler : MonoBehaviour
         timer = FindObjectOfType<Timer>();
         heartManager = FindObjectOfType<HeartManager>();
         gameOverPanel = GameObject.Find("GameOver");
+        gameWonPanel = GameObject.Find("GameWon");
 
         gameOverPanel.SetActive(false);
+        gameWonPanel.SetActive(false);
     }
 
     void OnCollisionEnter(Collision other){
@@ -92,7 +96,6 @@ public class ColliosionHandler : MonoBehaviour
 
     public void LoseLife()
     {
-        
         lives--;
         Debug.Log("Losing life, now at: " + lives);
         heartManager.LoseHeart();
@@ -115,20 +118,12 @@ public class ColliosionHandler : MonoBehaviour
     {
         gameOverPanel.SetActive(true);
         PlaySound(gameOver);
-        string text = "Cats normally have 9 lives, you had 3..";
-        if (isByTimer)
-        {
-            text = "10 minutes wasn't enough?";
-        }
-        var textChildren = gameOverPanel.GetComponentsInChildren<Text>();
-        for (int i = 0; i < textChildren.Length; i++)
-        {
-            if (textChildren[i].name == "DescriptionText")
-            {
-                textChildren[i].text = text;
-            }
-        }
+        Time.timeScale = 0f;
+    }
 
+    public void FinishGame()
+    {
+        gameWonPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
