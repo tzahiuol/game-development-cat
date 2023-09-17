@@ -10,7 +10,7 @@ public class LiftAnimation : MonoBehaviour
     //sets a bool to tell the scrip whether the lifts needs to go down or up for the first time
     public bool liftInitialUp;
 
-    //ger rigid body of player to freeze it while the animation is ongoing
+    //get rigid body of player to freeze it while the animation is ongoing
     private RigidbodyConstraints originalConstraints;
     private Rigidbody catRb;
 

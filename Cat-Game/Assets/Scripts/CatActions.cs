@@ -16,7 +16,7 @@ public class CatActions : MonoBehaviour
     bool walking = false;
     [SerializeField] float moveSpeed = 1000;
     [SerializeField] float turnSpeed = 100;
-    [SerializeField] float jumpForce = 30;
+    [SerializeField] float jumpForce = 3;
 
     Vector3 moveForce; 
     
@@ -116,6 +116,10 @@ public class CatActions : MonoBehaviour
     void OnCollisionStay(Collision other){
         if(other.gameObject.tag == "shoveItem" && shoveItem == true){
             other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,20), ForceMode.Force);
+            if (other.gameObject.name == "Dishes") 
+            {
+                Destroy(other.gameObject.GetComponent<BoxCollider>()); 
+            }
         }
         
         onGround = true;
