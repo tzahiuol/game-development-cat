@@ -92,8 +92,7 @@ public class ItemCollision : MonoBehaviour
         yield return new WaitForSeconds(delay); //to delay the transition of the levels
 
         string prefixLevel = "Level";
-        SceneManager.LoadScene(prefixLevel + level, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(prefixLevel + level);
+        SceneManager.LoadScene(prefixLevel + level);
 
         GameObject.FindObjectOfType<KeysManager>().Restart();
     }

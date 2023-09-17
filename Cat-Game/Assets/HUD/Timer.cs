@@ -13,27 +13,19 @@ public class Timer : MonoBehaviour
 
     public Text TimerText;
 
-    private static Timer _instance;
+    public static float TimeLeft_Static;
 
-    public static Timer Instance { get { return _instance; } }
-
-
-    private void Awake()
+    // Start is called before the first frame update
+    private void Start()
     {
-        if (_instance != null && _instance != this)
+        if (Timer.TimeLeft_Static == 0)
         {
-            Destroy(this.gameObject);
+            TimeLeft = InitalTime; 
         }
         else
         {
-            _instance = this;
+            TimeLeft = Timer.TimeLeft_Static;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        TimeLeft = InitalTime;
     }
 
     // Update is called once per frame
@@ -44,11 +36,14 @@ public class Timer : MonoBehaviour
             if (TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime;
+                Timer.TimeLeft_Static = TimeLeft;
+
                 UpdateText(TimeLeft);
             }
             else
             {
                 TimeLeft = 0;
+                Timer.TimeLeft_Static = TimeLeft;
                 TimerOn = false;
                 TimeIsUp();
             }
@@ -66,6 +61,7 @@ public class Timer : MonoBehaviour
     {
         print("Restarting");
         TimeLeft = InitalTime;
+        Timer.TimeLeft_Static = InitalTime;
         TimerOn = true;
     }
 
