@@ -75,7 +75,7 @@ public class CatActions : MonoBehaviour
         // }  
         //rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);     
         
-        shoveItem = false;
+        
     }
 
     public void OnMove(InputValue input){
@@ -110,12 +110,12 @@ public class CatActions : MonoBehaviour
     }
 
     void OnShove(InputValue input){
-        shoveItem = true;
+        anim.SetTrigger("Shove");
     }
 
     void OnCollisionStay(Collision other){
         if(other.gameObject.tag == "shoveItem" && shoveItem == true){
-            other.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 10, ForceMode.Impulse);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,20), ForceMode.Force);
         }
         
         onGround = true;
@@ -127,5 +127,13 @@ public class CatActions : MonoBehaviour
 
     public void setDeath(bool aliveStat){
         anim.SetBool("Died", aliveStat);
+    }
+
+
+    private void shoveOn(){
+        shoveItem = true;
+    }
+    private void shoveOff(){
+        shoveItem = false;
     }
 }
