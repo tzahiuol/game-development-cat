@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: LiftUp
+    m_ConditionEvent: WasherUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8238987569920277520}
@@ -73,7 +73,7 @@ AnimatorController:
   m_Name: Washer
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: LiftUp
+  - m_Name: WasherUp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
