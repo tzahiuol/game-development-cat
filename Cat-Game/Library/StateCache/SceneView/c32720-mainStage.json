@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":631.9773559570313,"y":255.52867126464845,"z":-104.84675598144531},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":308.7156677246094,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-3.6671199798583986,"y":-1.5148582458496094,"z":-25.994583129882814},"rotation":{"x":-0.00022384901240002364,"y":0.9824150800704956,"z":-0.1867074817419052,"w":-0.0011784132802858949},"size":14.833394050598145,"orthographic":false}
+>>>>>>> ShoveImplementation
