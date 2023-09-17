@@ -147,8 +147,7 @@ public class ColliosionHandler : MonoBehaviour
         GetComponent<CatActions>().setDeath(false);
         GetComponent<CatActions>().enabled = true;
         GameObject.FindObjectOfType<KeysManager>().Restart();
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name); // reload scene
+        SceneManager.LoadScene("Level1"); // reload scene
     }
 
     public void Shove(){

@@ -15,7 +15,8 @@ public class ItemCollision : MonoBehaviour
 
     public Animator keyAnimation;
 
-
+    //https://docs.unity3d.com/ScriptReference/AudioSource.html
+    //https://docs.unity3d.com/ScriptReference/AudioClip.html
     //audio sources 
     [SerializeField]
     private AudioSource audioSource;
@@ -45,19 +46,16 @@ public class ItemCollision : MonoBehaviour
         Debug.Log(other);
         if (other.gameObject.tag == "collectible")
         {
-            PlaySound(itemCollected);
             
+            PlaySound(itemCollected);
             //increase collected item count
             collectedItems++;
          
             //pass item to CheckItems 
             CheckItems(other.gameObject);
-
+            
             other.gameObject.GetComponent<Animator>().SetTrigger("Collected");
             GameObject.FindObjectOfType<KeysManager>().FoundKey();
-
-            //make object inactive, since we still need information for CheckItems function
-            //other.gameObject.SetActive(false);
         }
         if(other.gameObject.tag == "transition") //check for collission with transition collider
         {

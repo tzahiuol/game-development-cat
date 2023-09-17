@@ -25,12 +25,17 @@ public class CatActions : MonoBehaviour
     [SerializeField] float maxMoveSpeed = 3;
     [SerializeField] float jumpMultiplier = 1.5f;
 
+    //used for rotation lerping
+    private Quaternion targetRotation;
+    [SerializeField] float rotationAmount = 45f;
+
     // Start is called before the first frame update
     void Start()
     {
         
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        targetRotation = transform.rotation;
         // ch = GetComponent<CollisionHandler>();
     }
 
@@ -47,18 +52,36 @@ public class CatActions : MonoBehaviour
         
         rb.AddForce(moveForce);
         Vector3 rotation = new Vector3(0,movementVec.x,0) * turnSpeed * Time.deltaTime;
-        transform.Rotate(rotation);      
+        transform.Rotate(rotation);
 
 
         // Limit the cat's maximum movement speed
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);     
+
+        // Apply torque for turning
+        // For rotation
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            // Update the target rotation 90 degrees to the left
+            targetRotation *= Quaternion.Euler(0, -rotationAmount, 0); ;
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            // Update the target rotation 90 degrees to the left
+            targetRotation *= Quaternion.Euler(0, rotationAmount, 0);
+        }
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
+        // Play walk animation when moving
+        // anim.SetBool("Walk", rb.velocity.magnitude > 0.1f);
+        // }  
+        //rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMoveSpeed);     
         
         shoveItem = false;
     }
 
     public void OnMove(InputValue input){
 
-        Vector2 xyInput = input.Get<Vector2>();        
+        Vector2 xyInput = input.Get<Vector2>(); 
+        
         movementVec = new Vector3(xyInput.x, 0, xyInput.y);
 
 

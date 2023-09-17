@@ -58,6 +58,7 @@
      <Compile Include="Assets\Animations\Quirky Series Ultimate\_Scripts\Demo.cs" />
      <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
      <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorToggle.cs" />
+     <Compile Include="Assets\FreezerCollider.cs" />
      <Compile Include="Assets\HUD\EndGame.cs" />
      <Compile Include="Assets\HUD\HeartManager.cs" />
      <Compile Include="Assets\HUD\KeysManager.cs" />
