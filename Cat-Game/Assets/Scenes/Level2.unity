@@ -356,12 +356,17 @@ PrefabInstance:
     - target: {fileID: 8983697510464531549, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.05
+      value: -9.068
       objectReference: {fileID: 0}
     - target: {fileID: 8983697510464531549, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.97
+      value: 3.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983697510464531549, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 8983697511508842665, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
@@ -371,12 +376,17 @@ PrefabInstance:
     - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
+        type: 3}
+      propertyPath: acceleration
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: jumpMultiplier
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8983697511508842669, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
@@ -2913,10 +2923,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   liftAnimation: {fileID: 912474198}
   liftInitialUp: 1
-  pivot: {fileID: 0}
+  pivot: {fileID: 1861985606}
   lerpSpeed: 1
   audioSource: {fileID: 0}
   elevatorSound: {fileID: 0}
+--- !u!65 &912474200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912474197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9831889, y: 1.1094501, z: 1.1094505}
+  m_Center: {x: 0.1612959, y: 0, z: -1.4669773e-13}
 --- !u!4 &912474201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9194984060573762953, guid: f0d11665f5b6e4e4f9262a51b4b2cd2a,
@@ -4839,8 +4862,8 @@ GameObject:
   - component: {fileID: 1712820771}
   - component: {fileID: 1712820770}
   m_Layer: 0
-  m_Name: Transition Path
-  m_TagString: transition
+  m_Name: TransitionPath
+  m_TagString: gamefinish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4938,6 +4961,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1758669896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5652247741901432800, guid: 49e948fe26356c64e9bccc46963c77da,
+    type: 3}
+  m_PrefabInstance: {fileID: 583687647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1758669899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758669896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.94554883, y: 2.2400641, z: 0.99295825}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1776069817
 GameObject:
   m_ObjectHideFlags: 0
@@ -5370,7 +5412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4c02617c2fdc347a615fa1673410b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  washerAnimator: {fileID: 0}
+  washerAnimator: {fileID: 912474198}
 --- !u!1001 &2017467239
 PrefabInstance:
   m_ObjectHideFlags: 0

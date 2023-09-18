@@ -53,9 +53,11 @@ public class ColliosionHandler : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision other){
-        if (other.gameObject.tag != "collectible" )
+
+        if (other.gameObject.tag == "gamefinish")
         {
-            Debug.Log("Collision detected");
+            FinishGame();
+            Debug.Log("Game done");
         }
     }
 
@@ -91,6 +93,7 @@ public class ColliosionHandler : MonoBehaviour
                 }
             }
         }
+
 
     }
 

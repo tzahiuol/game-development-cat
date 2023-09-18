@@ -6955,7 +6955,7 @@ PrefabInstance:
     - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: acceleration
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
@@ -6965,7 +6965,7 @@ PrefabInstance:
     - target: {fileID: 8983697511508842667, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
       propertyPath: jumpMultiplier
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8983697511508842668, guid: 6db1407b82e3a5d4f8c768cf60ecc783,
         type: 3}
