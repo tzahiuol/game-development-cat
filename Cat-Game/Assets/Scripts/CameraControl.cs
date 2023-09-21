@@ -44,7 +44,7 @@ public class CameraControl : MonoBehaviour
         zoomOutPivotStart = zoomOutPivot.transform.position;
         
 
-        transform.LookAt(character.position);
+        //transform.LookAt(character.position);
     }
 
     void Update()
@@ -78,7 +78,7 @@ public class CameraControl : MonoBehaviour
                 Debug.Log("It is pressed");
                 //transform.LookAt(character.position);
             }
-            transform.LookAt(character.position);
+            //transform.LookAt(character.position);
         }
  
     }
@@ -120,7 +120,7 @@ public class CameraControl : MonoBehaviour
                 (diffZ <= maxZoomOut))
             {
                 //https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
-                transform.LookAt(character.position);
+               // transform.LookAt(character.position);
                 transform.position = Vector3.Lerp(transform.position, zoomVectorOut, lerpSpeed);
                 
             }

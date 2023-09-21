@@ -46,7 +46,7 @@ public class CameraRotation : MonoBehaviour
         directionToCamera = rotation * directionToCamera;
         transform.position = pivotPoint.position + directionToCamera;
 
-        //transform.LookAt(pivotPoint);
+        transform.LookAt(pivotPoint);
 
         //store original rotation before look at
         Vector3 originalRotation = transform.eulerAngles;
