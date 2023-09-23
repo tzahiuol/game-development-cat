@@ -9,7 +9,10 @@ public class CatActions : MonoBehaviour
     Vector3 movementVec;
     Animator anim;
     Rigidbody rb;
-    
+
+    //sound effects
+    [SerializeField] AudioSource jumpMeowSound;
+
     // CollisionHandler ch;
     bool shoveItem = false;
     bool onGround = false;
@@ -103,6 +106,7 @@ public class CatActions : MonoBehaviour
         if (onGround == true)
         {
             rb.AddForce(transform.up * jumpForce * jumpMultiplier, ForceMode.Impulse);
+            jumpMeowSound.Play();
             onGround = false;
         }
     }
