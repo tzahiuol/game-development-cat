@@ -28,7 +28,7 @@ public class ColliosionHandler : MonoBehaviour
     //audio sources 
     [SerializeField]
     private AudioSource audioSource;
-    public AudioClip hit;
+    public AudioClip loseLifeSound;
     public AudioClip gameOver;
 
     //transparentMaterial
@@ -111,7 +111,7 @@ public class ColliosionHandler : MonoBehaviour
         }
         else
         {
-            PlaySound(hit);
+            PlaySound(loseLifeSound);
             RestartPosition();
         }
 
