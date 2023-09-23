@@ -112,7 +112,6 @@ public class ColliosionHandler : MonoBehaviour
         else
         {
             PlaySound(loseLifeSound);
-            RestartPosition();
         }
 
     }
@@ -139,7 +138,6 @@ public class ColliosionHandler : MonoBehaviour
     public void Restart()
     {
         timer.Restart();
-        RestartPosition();
         heartManager.Restart();
         lives = initialLives;
         GetComponent<CatActions>().setDeath(false);
