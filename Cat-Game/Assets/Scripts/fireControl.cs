@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class fireControl : MonoBehaviour
 {
+    //audio source 
+    [SerializeField] AudioSource splashSound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,10 +19,22 @@ public class fireControl : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other){
+    private void OnTriggerEnter(Collider other)
+    {
         Debug.Log(other.gameObject.tag);
-        if(other.gameObject.tag == "shoveItem"){
+        if (other.gameObject.tag == "shoveItem")
+        {
+            PlaySplashSound();
             Destroy(gameObject);
+        }
+    }
+
+    private void PlaySplashSound()
+    {
+        // Play Splash sound when water puts out fire
+        if (splashSound && !splashSound.isPlaying)
+        {
+            splashSound.Play();
         }
     }
 }

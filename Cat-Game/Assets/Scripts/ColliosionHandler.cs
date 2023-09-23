@@ -28,7 +28,7 @@ public class ColliosionHandler : MonoBehaviour
     //audio sources 
     [SerializeField]
     private AudioSource audioSource;
-    public AudioClip hit;
+    public AudioClip loseLifeSound;
     public AudioClip gameOver;
 
     //transparentMaterial
@@ -179,8 +179,7 @@ public class ColliosionHandler : MonoBehaviour
         }
         else
         {
-            PlaySound(hit);
-            RestartPosition();
+            PlaySound(loseLifeSound);
         }
 
     }
@@ -207,7 +206,6 @@ public class ColliosionHandler : MonoBehaviour
     public void Restart()
     {
         timer.Restart();
-        RestartPosition();
         heartManager.Restart();
         lives = initialLives;
         GetComponent<CatActions>().setDeath(false);
