@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class fireControl : MonoBehaviour
 {
+    //audio source 
+    [SerializeField]
+    private AudioSource splashSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,7 @@ public class fireControl : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         Debug.Log(other.gameObject.tag);
         if(other.gameObject.tag == "shoveItem"){
+            splashSound.Play();
             Destroy(gameObject);
         }
     }
