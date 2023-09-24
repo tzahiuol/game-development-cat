@@ -24,6 +24,7 @@ public class ColliosionHandler : MonoBehaviour
     private GameObject gameOverPanel;
 
     private GameObject gameWonPanel;
+    private GameObject enemy;
 
     //audio sources 
     [SerializeField]
@@ -37,8 +38,8 @@ public class ColliosionHandler : MonoBehaviour
     private GameObject[] transparentObjects;
     private Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
 
-    private GameObject transparentExit;
-    private GameObject transparentExit2; //on level 2
+    private GameObject[] transparentExit;
+    
     void Start()
     {
         catActionScript = GetComponent<CatActions>();
@@ -52,13 +53,18 @@ public class ColliosionHandler : MonoBehaviour
         heartManager = FindObjectOfType<HeartManager>();
         gameOverPanel = GameObject.Find("GameOver");
         gameWonPanel = GameObject.Find("GameWon");
-        transparentExit = GameObject.Find("TunnelColliderBox2");
-        transparentExit2 = GameObject.Find("TunnelColliderBox3");
+        transparentExit = GameObject.FindGameObjectsWithTag("TransparentTriggerExit");
+        enemy = GameObject.FindGameObjectWithTag("enemy");
 
         gameOverPanel.SetActive(false);
         gameWonPanel.SetActive(false);
-        transparentExit.SetActive(false);
-        transparentExit2.SetActive(false);
+
+        foreach(GameObject obj in transparentExit) 
+        {
+            obj.SetActive(false);
+        }
+       
+        
 
 
         transparentObjects = GameObject.FindGameObjectsWithTag("TransparentObject");
@@ -122,8 +128,10 @@ public class ColliosionHandler : MonoBehaviour
             {
                 kvp.Key.GetComponent<Renderer>().material = transparentMaterial;
             }
-            transparentExit.SetActive(true);
-            transparentExit2.SetActive(true);
+            foreach (GameObject obj in transparentExit)
+            {
+                obj.SetActive(true);
+            }
         }
         if (other.gameObject.tag == "TransparentTriggerExit")
         {
@@ -142,8 +150,10 @@ public class ColliosionHandler : MonoBehaviour
             {
                 kvp.Key.GetComponent<Renderer>().material = kvp.Value;
             }
-            transparentExit.SetActive(false);
-            transparentExit2.SetActive(false);
+            foreach (GameObject obj in transparentExit)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 
@@ -173,6 +183,7 @@ public class ColliosionHandler : MonoBehaviour
     public void LoseLife()
     {
         lives--;
+        enemy.GetComponent<Collider>().enabled = false;
         Debug.Log("Losing life, now at: " + lives);
         heartManager.LoseHeart();
         GetComponent<CatActions>().setDeath(true);
@@ -206,6 +217,7 @@ public class ColliosionHandler : MonoBehaviour
     {
         gameObject.transform.rotation = catRotation;
         gameObject.transform.position = catPos;
+        enemy.GetComponent<Collider>().enabled = true;
     }
 
     public void Restart()
