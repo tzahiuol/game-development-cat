@@ -34,6 +34,10 @@ public class ColliosionHandler : MonoBehaviour
     //transparentMaterial
     public Material transparentMaterial;
 
+    private GameObject[] transparentObjects;
+    private Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
+
+    private GameObject transparentExit;
     void Start()
     {
         catActionScript = GetComponent<CatActions>();
@@ -47,9 +51,24 @@ public class ColliosionHandler : MonoBehaviour
         heartManager = FindObjectOfType<HeartManager>();
         gameOverPanel = GameObject.Find("GameOver");
         gameWonPanel = GameObject.Find("GameWon");
+        transparentExit = GameObject.Find("TunnelColliderBox2");
 
         gameOverPanel.SetActive(false);
         gameWonPanel.SetActive(false);
+        transparentExit.SetActive(false);
+
+
+        transparentObjects = GameObject.FindGameObjectsWithTag("TransparentObject");
+
+        foreach (GameObject transparentObject in transparentObjects)
+        {
+            Renderer renderer = transparentObject.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                // Store the original material
+                originalMaterials[transparentObject] = renderer.material;
+            }
+        }
     }
 
     void OnCollisionEnter(Collision other){
@@ -82,20 +101,69 @@ public class ColliosionHandler : MonoBehaviour
         {
             //change the material of object with tag transparentobject
             Debug.Log("In Tunnel");
-            GameObject[] transparentObjects  = GameObject.FindGameObjectsWithTag("TransparentObject");
+            //GameObject[] transparentObjects  = GameObject.FindGameObjectsWithTag("TransparentObject");
 
-            foreach (GameObject transparentObject in transparentObjects)
+            //    foreach (GameObject transparentObject in transparentObjects)
+            //    {
+            //        Renderer rendering = transparentObject.GetComponent<Renderer>();
+            //        if (rendering != null)
+            //        {
+
+            //            // Store the original material
+            //            originalMaterials[rendering] = rendering.material;
+
+            //            rendering.material = transparentMaterial;
+            //        }
+            //    }
+            foreach (var kvp in originalMaterials)
             {
-                Renderer rendering = transparentObject.GetComponent<Renderer>();
-                if (rendering != null)
-                {
-                    rendering.material = transparentMaterial;
-                }
+                kvp.Key.GetComponent<Renderer>().material = transparentMaterial;
             }
+            transparentExit.SetActive(true);
         }
-
-
+        if (other.gameObject.tag == "TransparentTriggerExit")
+        {
+            Debug.Log("Out of Tunnel");
+            //https://stackoverflow.com/questions/27151322/foreach-loop-using-kvp-to-iterate-through-a-multi-dimensional-list
+            //foreach (var kvp in originalMaterials)
+            //{
+            //    Renderer rendering = kvp.Key;
+            //    Material originalMaterial = kvp.Value;
+            //    // restore the original material
+            //    rendering.material = originalMaterial;
+            //}
+            //// clear the dictionary as we have restored all original materials
+            //originalMaterials.Clear();
+            foreach (var kvp in originalMaterials)
+            {
+                kvp.Key.GetComponent<Renderer>().material = kvp.Value;
+            }
+            transparentExit.SetActive(false);
+        }
     }
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.tag == "TransparentTrigger")
+    //    {
+    //        Debug.Log("Out of Tunnel");
+    //        //https://stackoverflow.com/questions/27151322/foreach-loop-using-kvp-to-iterate-through-a-multi-dimensional-list
+    //        //foreach (var kvp in originalMaterials)
+    //        //{
+    //        //    Renderer rendering = kvp.Key;
+    //        //    Material originalMaterial = kvp.Value;
+    //        //    // restore the original material
+    //        //    rendering.material = originalMaterial;
+    //        //}
+    //        //// clear the dictionary as we have restored all original materials
+    //        //originalMaterials.Clear();
+    //        foreach (var kvp in originalMaterials)
+    //        {
+    //            kvp.Key.GetComponent<Renderer>().material = kvp.Value;
+    //        }
+
+    //    }
+    //}
 
     public void LoseLife()
     {
