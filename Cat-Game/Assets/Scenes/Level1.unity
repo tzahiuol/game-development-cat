@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194230}
-  - component: {fileID: 963194232}
+  - component: {fileID: 963194231}
   - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f9295764d21684797cf8f7269b5e1a, type: 3}
+  m_Script: {fileID: 11500000, guid: b76db5a5d3728bc4fb1be73e50cfede5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   birdViewTransform: {fileID: 344257944}
@@ -2611,7 +2611,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &963194232
+--- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
