@@ -15,7 +15,9 @@ public class CameraRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pivotOffset = transform.position - pivotPoint.position;
+        // Set the camera's position and rotation to the values set in the editor.
+        transform.position = pivotPoint.position + pivotOffset;
+        transform.LookAt(pivotPoint);
     }
 
     // Update is called once per frame
@@ -57,7 +59,7 @@ public class CameraRotation : MonoBehaviour
         //revert rotation except y
         transform.position = originalPosition;
         transform.rotation = Quaternion.Euler(originalRotation.x, transform.eulerAngles.y, originalRotation.z);
-        
+
 
         pivotOffset = transform.position - pivotPoint.position;
     }
