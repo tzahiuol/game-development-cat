@@ -284,7 +284,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -641,46 +641,46 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InputSystem">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDev/Final/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Acer/Documents/Studies/UoL_Computer_Science/GamDevFinal/game-development-cat/Cat-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
