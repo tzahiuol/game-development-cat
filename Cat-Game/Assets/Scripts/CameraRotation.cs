@@ -57,7 +57,7 @@ public class CameraRotation : MonoBehaviour
         //revert rotation except y
         transform.position = originalPosition;
         transform.rotation = Quaternion.Euler(originalRotation.x, transform.eulerAngles.y, originalRotation.z);
-        
+
 
         pivotOffset = transform.position - pivotPoint.position;
     }

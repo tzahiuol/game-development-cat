@@ -65,6 +65,7 @@
      <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
      <Compile Include="Assets\PauseMenu\PauseMenu.cs" />
      <Compile Include="Assets\PlayerOnLift.cs" />
+     <Compile Include="Assets\Scripts\CameraBirdViewRotation.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CameraRotation.cs" />
      <Compile Include="Assets\Scripts\CatActions.cs" />
