@@ -3,7 +3,12 @@ guid: 9c92f657fc2e82d49ba12db56c94fa57
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cat: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - loseLifeSound: {instanceID: 0}
+  - gameOver: {instanceID: 0}
+  - transparentMaterial: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

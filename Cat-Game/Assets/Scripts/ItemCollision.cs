@@ -22,6 +22,7 @@ public class ItemCollision : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip allItems;
     public AudioClip itemCollected;
+    public AudioClip LevelComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -88,6 +89,8 @@ public class ItemCollision : MonoBehaviour
     //https://discussions.unity.com/t/what-are-ienumerator-and-coroutine/143510/2
     IEnumerator LoadNextLevelAfterDelay(float delay, int level)
     {
+        PlaySound(LevelComplete);
+
         //https://docs.unity3d.com/ScriptReference/WaitForSeconds.html
         yield return new WaitForSeconds(delay); //to delay the transition of the levels
 
