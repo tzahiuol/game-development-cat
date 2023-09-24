@@ -38,6 +38,7 @@ public class ColliosionHandler : MonoBehaviour
     private Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
 
     private GameObject transparentExit;
+    private GameObject transparentExit2; //on level 2
     void Start()
     {
         catActionScript = GetComponent<CatActions>();
@@ -52,10 +53,12 @@ public class ColliosionHandler : MonoBehaviour
         gameOverPanel = GameObject.Find("GameOver");
         gameWonPanel = GameObject.Find("GameWon");
         transparentExit = GameObject.Find("TunnelColliderBox2");
+        transparentExit2 = GameObject.Find("TunnelColliderBox3");
 
         gameOverPanel.SetActive(false);
         gameWonPanel.SetActive(false);
         transparentExit.SetActive(false);
+        transparentExit2.SetActive(false);
 
 
         transparentObjects = GameObject.FindGameObjectsWithTag("TransparentObject");
@@ -120,6 +123,7 @@ public class ColliosionHandler : MonoBehaviour
                 kvp.Key.GetComponent<Renderer>().material = transparentMaterial;
             }
             transparentExit.SetActive(true);
+            transparentExit2.SetActive(true);
         }
         if (other.gameObject.tag == "TransparentTriggerExit")
         {
@@ -139,6 +143,7 @@ public class ColliosionHandler : MonoBehaviour
                 kvp.Key.GetComponent<Renderer>().material = kvp.Value;
             }
             transparentExit.SetActive(false);
+            transparentExit2.SetActive(false);
         }
     }
 
