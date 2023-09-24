@@ -568,7 +568,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6491867951602995276}
   - component: {fileID: 628081980062735288}
-  - component: {fileID: 7777270997964151960}
   - component: {fileID: 1000896543842247130}
   - component: {fileID: 8337815358025267620}
   m_Layer: 0
@@ -608,29 +607,10 @@ BoxCollider:
   m_GameObject: {fileID: 7590074741831162595}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.3578792, y: 1.8688692, z: 0.7693629}
   m_Center: {x: -1.1818388, y: 0.79490876, z: -0.6048379}
---- !u!114 &7777270997964151960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7590074741831162595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd5614864e06eb0489a58b67a566dbb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  liftAnimation: {fileID: 0}
-  liftInitialUp: 0
-  pivot: {fileID: 8308207009420435240}
-  lerpSpeed: 1
-  audioSource: {fileID: 8337815358025267620}
-  elevatorSound: {fileID: 8300000, guid: be36a313f9d732a449e17ca2e3610d8f, type: 3}
-  elevatorBell: {fileID: 8300000, guid: b4e5a033c1c58b941961b36f478b6e57, type: 3}
 --- !u!95 &1000896543842247130
 Animator:
   serializedVersion: 3
@@ -761,7 +741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7946286022602977634
 Transform:
   m_ObjectHideFlags: 0
